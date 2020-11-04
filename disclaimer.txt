@@ -1,0 +1,9 @@
+This comparator taking into account any dependencies given on process-tree structure explicitly:
+1) pid--ppid relation , as structure one
+2) sid, as distance between session leader and current node, else "-1"
+3) reverse reparents, as 1 and 2 superposition for children of parent
+Note that original WL hashing algo from networkx stay unchanged: it seems to be enough to provide comparison
+TO DO:
+
+1) testing
+2) pgid/namespaces accounting
